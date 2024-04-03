@@ -15,13 +15,18 @@ function Graph() {
       try {
         const response = await fetch(apiUrl);
         const result = await response.json();
-        setArray(result.array);
+        setArray(result.data);
       } catch (error) {
         console.log(error.message);
       }
     }
     getData();
-  }, []);
+  }, [])
+
+  
+console.log(array);
+
+
 
   const test = {
     labels: ["January", "February", "March", "April", "May", "June", "July"],
