@@ -28,7 +28,7 @@ function Graph() {
     datasets: [
       {
         label: "Example Dataset",
-        data: [65, 59, 80, 81, 56, 55, 40],
+        data: [65, 59, 80, 81, 56, 550, 40],
       },
     ],
   };
