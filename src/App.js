@@ -1,12 +1,16 @@
 import './App.css';
-import BarComp from './components/BarComp';
+
 import Graph from './components/Graph';
+import Tester from './components/Tester';
+import SideBar from './components/SIdebar';
 
 function App() {
   return (
     <div className="App">
-      <Graph/>
-      <BarComp/>
+      {/* <Graph/> */}
+ 
+      {/* <Tester/> */}
+      <SideBar/>
     </div>
   );
 }
