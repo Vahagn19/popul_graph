@@ -1,48 +1,81 @@
-import { useEffect, useState } from "react";
-import { Bar } from "react-chartjs-2";
-import styles from "./graph.module.css";
-import { Chart } from "chart.js";
-import { CategoryScale } from "chart.js";
-Chart.register(CategoryScale);
+import { Bar, BarChart, ResponsiveContainer, XAxis, YAxis } from 'recharts'
 
-function Graph() {
-  const [array, setArray] = useState(null);
-  const apiUrl =
-    "https://datausa.io/api/data?drilldowns=Nation&measures=Population";
+const data = [
+  {
+    name: 'Jan',
+    total: Math.floor(Math.random() * 5000) + 1000,
+  },
+  {
+    name: 'Feb',
+    total: Math.floor(Math.random() * 5000) + 1000,
+  },
+  {
+    name: 'Mar',
+    total: Math.floor(Math.random() * 5000) + 1000,
+  },
+  {
+    name: 'Apr',
+    total: Math.floor(Math.random() * 5000) + 1000,
+  },
+  {
+    name: 'May',
+    total: Math.floor(Math.random() * 5000) + 1000,
+  },
+  {
+    name: 'Jun',
+    total: Math.floor(Math.random() * 5000) + 1000,
+  },
+  {
+    name: 'Jul',
+    total: Math.floor(Math.random() * 5000) + 1000,
+  },
+  {
+    name: 'Aug',
+    total: Math.floor(Math.random() * 5000) + 1000,
+  },
+  {
+    name: 'Sep',
+    total: Math.floor(Math.random() * 5000) + 1000,
+  },
+  {
+    name: 'Oct',
+    total: Math.floor(Math.random() * 5000) + 1000,
+  },
+  {
+    name: 'Nov',
+    total: Math.floor(Math.random() * 5000) + 1000,
+  },
+  {
+    name: 'Dec',
+    total: Math.floor(Math.random() * 5000) + 1000,
+  },
+]
 
-  useEffect(() => {
-    async function getData() {
-      try {
-        const response = await fetch(apiUrl);
-        const result = await response.json();
-        setArray(result.data);
-      } catch (error) {
-        console.log(error.message);
-      }
-    }
-    getData();
-  }, [])
-
-  
-console.log(array);
-
-
-
-  const test = {
-    labels: ["January", "February", "March", "April", "May", "June", "July"],
-    datasets: [
-      {
-        label: "Example Dataset",
-        data: [65, 59, 80, 81, 56, 550, 40],
-      },
-    ],
-  };
-
+export default function Graph() {
   return (
-    <div>
-      {/* <Bar data={test} /> */}
-    </div>
-  );
+    <ResponsiveContainer width='100%' height={350}>
+      <BarChart data={data}>
+        <XAxis
+          dataKey='name'
+          stroke='#888888'
+          fontSize={12}
+          tickLine={false}
+          axisLine={false}
+        />
+        <YAxis
+          stroke='#888888'
+          fontSize={12}
+          tickLine={false}
+          axisLine={false}
+          tickFormatter={(value) => `$${value}`}
+        />
+        <Bar
+          dataKey='total'
+          fill='currentColor'
+          radius={[4, 4, 0, 0]}
+          className='fill-primary'
+        />
+      </BarChart>
+    </ResponsiveContainer>
+  )
 }
-
-export default Graph;

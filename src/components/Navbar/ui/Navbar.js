@@ -62,9 +62,9 @@ export function Navbar() {
               >
                 <ShoppingCart className="h-4 w-4" />
                 Orders
-                <Badge className="ml-auto flex h-6 w-6 shrink-0 items-center justify-center rounded-full">
+                {/* <Badge className="ml-auto flex h-6 w-6 shrink-0 items-center justify-center rounded-full">
                   6
-                </Badge>
+                </Badge> */}
               </a>
               <a
                 href="#"
@@ -89,7 +89,7 @@ export function Navbar() {
               </a>
             </nav>
           </div>
-          <div className="mt-auto p-4">
+          {/* <div className="mt-auto p-4">
             <Card>
               <CardHeader className="p-2 pt-0 md:p-4">
                 <CardTitle>Upgrade to Pro</CardTitle>
@@ -104,7 +104,7 @@ export function Navbar() {
                 </Button>
               </CardContent>
             </Card>
-          </div>
+          </div> */}
         </div>
       </div>
       <div className="flex flex-col">
