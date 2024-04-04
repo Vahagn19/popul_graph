@@ -34,7 +34,6 @@ function Tester() {
 
 
 
-
   return (
     <div className="grid gap-4 sm:grid-cols-2 xl:grid-cols-2">
       <Card style={{
@@ -50,7 +49,15 @@ function Tester() {
             </p> */}
           <div className="mt-4 h-[200px]">
             <ResponsiveContainer width="100%" height="100%">
-              <BarChart data={array} >
+              <BarChart data={array?.map(({Population,...item})=>{
+                
+
+                return {
+                  ...item,
+                  // YAxis: counter+=100_000,
+                  Population: Population - 300_000_000
+                }
+              })} >
                 <XAxis dataKey="Year"/>
                 <YAxis />
                 <Bar

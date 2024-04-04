@@ -8,14 +8,15 @@ function App() {
 
   return (
     <div className="App">
-
-      {/* <Graph />
+{/* <Graph /> */}
+<Tester/>
+      {/* 
         <Changetheme /> */}
 
-      {/* <Tester/>
+      {/*
    
        */}
-      <Navbar />
+      {/* <Navbar /> */}
     </div>
 
   );
