@@ -28,10 +28,11 @@ export default function Graph() {
   }, []);
 
   return (
-    <Card className="p-2 pt-0 md:p-4">
+  
+    <Card className="ml-7 p-2 pt-0 md:p-4 mt-4">
       <CardHeader>Graph for Population</CardHeader>
       <CardContent>
-        <ResponsiveContainer width={600} height={350}>
+        <ResponsiveContainer width="100%" height={350}>
           <BarChart
             data={array?.map(({ Population, ...item }) => {
               return {
