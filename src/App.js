@@ -1,24 +1,17 @@
-import './App.css';
-import Graph from './components/Graph';
-import Tester from './components/Tester';
-import Navbar from './components/Navbar/ui/Navbar';
-import Changetheme from './theme/Changetheme';
+import "./App.css";
+import CryptoCurse from "./components/CryptoCurse";
+import Graph from "./components/Graph";
+
+import Navbar from "./components/Navbar/ui/Navbar";
+import Changetheme from "./theme/Changetheme";
 function App() {
-
-
   return (
     <div className="App">
-{/* <Graph /> */}
-<Tester/>
-      {/* 
-        <Changetheme /> */}
-
-      {/*
-   
-       */}
-      {/* <Navbar /> */}
+      {/* <Changetheme /> */}
+      <Navbar />
+      {/* <Graph /> */}
+      {/* <CryptoCurse/> */}
     </div>
-
   );
 }
 
