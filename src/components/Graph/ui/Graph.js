@@ -29,7 +29,7 @@ export default function Graph() {
 
   return (
   
-    <Card className="ml-7 p-2 pt-0 md:p-4 mt-4">
+    <Card className="lg:col-span-4">
       <CardHeader>Graph for Population</CardHeader>
       <CardContent>
         <ResponsiveContainer width="100%" height={350}>

@@ -7,7 +7,7 @@ import Changetheme from "./theme/Changetheme";
 function App() {
   return (
     <div className="App">
-      {/* <Changetheme /> */}
+      <Changetheme />
       <Navbar />
       {/* <Graph /> */}
       {/* <CryptoCurse/> */}

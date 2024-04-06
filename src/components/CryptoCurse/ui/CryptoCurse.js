@@ -63,8 +63,8 @@ function CryptoCurse() {
             </h2>
           </CardContent>
           <CardFooter className="flex justify-between p-4 ml-4 mr-4 ">
-            <Button variant="outline" size="icon" >
-              <AlignCenter color="hsl(346.8 77.2% 49.8%)"   size={48} />
+            <Button variant="default" size="default" >
+              <AlignCenter  size={25} />
             </Button>
             <Button>Trade</Button>
           </CardFooter>
