@@ -2,12 +2,11 @@ import {
   Card,
   CardHeader,
   CardTitle,
-  CardDescription,
   CardContent,
   CardFooter,
 } from "../../ui/card";
 import { Button } from "../../ui/button";
-import {Info,Euro,DollarSign,BadgePoundSterling,AlignCenter } from "lucide-react";
+import { Euro, AlignCenter } from "lucide-react";
 import { useEffect, useState } from "react";
 
 function CryptoCurse() {
@@ -43,9 +42,9 @@ function CryptoCurse() {
 
   return (
 
-     exchange?.map(({code,rate,description})=>{
-        return(
-          <Card className="ml-4 mt-3 w-[370px] h-[250px] flex flex-col justify-between" key={code}>
+    exchange?.map(({ code, rate, description }) => {
+      return (
+        <Card className="ml-4 mt-3 w-[370px] h-[250px] flex flex-col justify-between" key={code}>
           <CardHeader className="flex-row items-center p-2 pl-0 ml-4">
             <Euro className="mt-2 text-xl" />
             <h2 className="mt-2 scroll-m-20 text-2xl font-semibold tracking-tight">
@@ -64,16 +63,16 @@ function CryptoCurse() {
           </CardContent>
           <CardFooter className="flex justify-between p-4 ml-4 mr-4 ">
             <Button variant="default" size="default" >
-              <AlignCenter  size={25} />
+              <AlignCenter size={25} />
             </Button>
             <Button>Trade</Button>
           </CardFooter>
         </Card>
-        
-        )
+
+      )
     })
- 
-    );
+
+  );
 }
 
 export default CryptoCurse;

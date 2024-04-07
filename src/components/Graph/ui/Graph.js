@@ -1,12 +1,6 @@
 import { useEffect, useState } from "react";
 import { Bar, BarChart, ResponsiveContainer, XAxis, YAxis } from "recharts";
-import {
-  Card,
-  CardContent,
-  CardFooter,
-  CardHeader,
-  CardTitle,
-} from "../../ui/card";
+import { Card, CardContent, CardHeader} from "../../ui/card";
 
 export default function Graph() {
   const [array, setArray] = useState(null);
@@ -26,9 +20,9 @@ export default function Graph() {
     }
     getData();
   }, []);
-
+console.log(array);
   return (
-  
+
     <Card className="lg:col-span-4">
       <CardHeader>Graph for Population</CardHeader>
       <CardContent>
@@ -53,10 +47,10 @@ export default function Graph() {
               fontSize={12}
               tickLine={false}
               axisLine={false}
-              tickFormatter={(value) => `$${value}`}
+              tickFormatter={(value) => `${Math.floor(value/100_000)}mln`}
             />
             <Bar
-              dataKey="Year"
+              dataKey="Population"
               fill="currentColor"
               radius={[4, 4, 0, 0]}
               className="fill-primary"
