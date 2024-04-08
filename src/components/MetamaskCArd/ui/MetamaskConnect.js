@@ -37,6 +37,8 @@ function MetamaskCard() {
           Metamask Wallet
         </h2>
       </CardHeader>
+      {userAccount?
+      <>
 <CardTitle className="flex justify-center mt-0"> 
   <h3 className="mt-0"> Account: MyAccount</h3>
 </CardTitle>
@@ -51,13 +53,16 @@ function MetamaskCard() {
       <CardFooter className="flex justify-center border-t">
         <Button className="mt-2 ">Manage Wallet</Button>
       </CardFooter>
+      </>:<div>
+<Button onClick={() => connectMetamask()}>Connect Metamask</Button>
+<h2>{userAccount?.account}</h2>
+</div>
+}
+
+
     </Card>
   );
 }
 
 export default MetamaskCard;
 
-// <div>
-// <Button onClick={() => connectMetamask()}>Connect Metamask</Button>
-// <h2>{userAccount.account}</h2>
-// </div>
