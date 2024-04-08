@@ -3,6 +3,7 @@ import { Button } from "../../ui/button"
 import NavLogo from "../../NavLogo"
 import NavList from "../../NavList"
 import { Menu } from "lucide-react"
+import Changetheme from "../../../theme/Changetheme"
 
 function Header() {
     return (
@@ -12,6 +13,7 @@ function Header() {
                     <SheetTitle>
                         <div className=" md:hidden">
                             <NavLogo />
+                            <Changetheme/>
                         </div>
                     </SheetTitle>
                     <SheetTrigger asChild>
