@@ -8,13 +8,14 @@ import Changetheme from "../../../theme/Changetheme"
 function Header() {
     return (
         <header className="flex h-[60px] items-center gap-4 border-b  lg:h-[60px] md:px-4 md:py-2 lg:px-6 lg:py-4">
+           
+
             <Sheet >
                 <div className="flex  items-center w-full justify-between p-3">
                     <SheetTitle>
                         <div className=" md:hidden">
                             <NavLogo />
-                            <Changetheme/>
-                        </div>
+                             </div>
                     </SheetTitle>
                     <SheetTrigger asChild>
                         <Button
@@ -31,6 +32,7 @@ function Header() {
                     <NavList />
                 </SheetContent>
             </Sheet>
+            <div className="mr-2">  <Changetheme/></div>
         </header>
 
 
