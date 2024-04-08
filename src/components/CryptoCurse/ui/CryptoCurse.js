@@ -44,7 +44,9 @@ function CryptoCurse() {
 
     exchange?.map(({ code, rate, description }) => {
       return (
-        <Card className="ml-4 mt-3 w-[370px] h-[250px] flex flex-col justify-between" key={code}>
+        
+<Card className="ml-2 w-full md:max-w-[370px] h-[250px] flex flex-col justify-between" key={code}>
+
           <CardHeader className="flex-row items-center p-2 pl-0 ml-4">
             <Euro className="mt-2 text-xl" />
             <h2 className="mt-2 scroll-m-20 text-2xl font-semibold tracking-tight">
@@ -69,6 +71,8 @@ function CryptoCurse() {
           </CardFooter>
         </Card>
 
+        
+        
       )
     })
 

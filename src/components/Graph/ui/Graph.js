@@ -1,11 +1,14 @@
 import { useEffect, useState } from "react";
-import { Bar, BarChart, ResponsiveContainer, XAxis, YAxis } from "recharts";
+import { Bar, BarChart, ResponsiveContainer, XAxis, YAxis,Tooltip } from "recharts";
 import { Card, CardContent, CardHeader} from "../../ui/card";
+import { useTheme } from "next-themes";
 
 export default function Graph() {
   const [array, setArray] = useState(null);
   const apiUrl =
     "https://datausa.io/api/data?drilldowns=Nation&measures=Population";
+
+    const {theme} = useTheme()
 
   useEffect(() => {
     async function getData() {
@@ -20,18 +23,18 @@ export default function Graph() {
     }
     getData();
   }, []);
-console.log(array);
+
   return (
 
-    <Card className="lg:col-span-4">
+    <Card className="m-4 lg:col-span-4 w-full">
       <CardHeader>Graph for Population</CardHeader>
       <CardContent>
-        <ResponsiveContainer width="100%" height={350}>
+        <ResponsiveContainer width="100%" height={330}>
           <BarChart
             data={array?.map(({ Population, ...item }) => {
               return {
                 ...item,
-                Population: Population - 300_000_000,
+                Population: Population - 310_000_000,
               };
             })}
           >
@@ -47,8 +50,13 @@ console.log(array);
               fontSize={12}
               tickLine={false}
               axisLine={false}
-              tickFormatter={(value) => `${Math.floor(value/100_000)}mln`}
+              tickFormatter={(value) => `${300+Math.floor(value/1000_000)}mln`}
             />
+            <Tooltip
+            itemStyle={{color:"black"}}
+            labelStyle={{color:"black"}}
+             formatter={(value)=>value+300000000}
+             />
             <Bar
               dataKey="Population"
               fill="currentColor"
