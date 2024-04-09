@@ -1,20 +1,28 @@
 import { MoonIcon, SunIcon } from "@radix-ui/react-icons";
 import { useTheme } from "next-themes";
 import { useState, useEffect } from "react";
-import { Button } from "../../ui/button";
+import { Button } from "app/ui/button"
+
+
+const defaultTheme = localStorage.getItem("theme") || "dark"
+
 
 function Changetheme() {
-  const [color, setColor] = useState("light");
+
+  const [color, setColor] = useState(defaultTheme);
   const { setTheme } = useTheme();
 
   const handleChangeTheme = () => {
     if (color === "dark") {
       setColor("light");
+      localStorage.setItem("theme", "light")
     }
     if (color === "light") {
       setColor("dark");
+      localStorage.setItem("theme", "dark")
     }
   };
+
   useEffect(() => {
     setTheme(color);
   }, [color, setTheme]);

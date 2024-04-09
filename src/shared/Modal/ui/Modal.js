@@ -1,42 +1,36 @@
+
 import {
-    AlertDialog,
-    AlertDialogAction,
-    AlertDialogCancel,
-    AlertDialogContent,
-    AlertDialogDescription,
-    AlertDialogFooter,
-    AlertDialogHeader,
-    AlertDialogTitle,
-    AlertDialogTrigger,
-  } from "../../../app/ui/alert-dialog"
-  
-import { Button } from "../../../app/ui/button"
+  AlertDialog,
+  AlertDialogAction,
+  AlertDialogContent,
+  AlertDialogDescription,
+  AlertDialogFooter,
+  AlertDialogHeader,
+  AlertDialogTitle,
+} from "../../../app/ui/alert-dialog";
+import { ErrorContext } from "../../Error/ui/ErrorProvider";
+import { useContext } from "react";
 
-function Modal({open,setOpen}){
+function Modal() {
+  const { error, setError, errorMessage } = useContext(ErrorContext);
 
-
-
-    return (
-        <AlertDialog open={open}>
-      <AlertDialogTrigger  asChild>
-        <Button  onClick={()=>setOpen(true)} variant="outline">Show Dialog</Button>
-      </AlertDialogTrigger>
-        <AlertDialogContent>
-          <AlertDialogHeader>
-            <AlertDialogTitle>Are you absolutely sure?</AlertDialogTitle>
-            <AlertDialogDescription>
-              This action cannot be undone. This will permanently delete your account
-              and remove your data from our servers.
-            </AlertDialogDescription>
-          </AlertDialogHeader>
-          <AlertDialogFooter>
-            <AlertDialogCancel onClick={()=>setOpen(false)}>Cancel</AlertDialogCancel>
-            <AlertDialogAction>Continue</AlertDialogAction>
-          </AlertDialogFooter>
-        </AlertDialogContent>
-      </AlertDialog>
-      
-    )
+  return (
+    <AlertDialog open={error}>
+      <AlertDialogContent>
+        <AlertDialogHeader>
+          <AlertDialogTitle>Notification!</AlertDialogTitle>
+          <AlertDialogDescription>
+         {errorMessage}
+          </AlertDialogDescription>
+        </AlertDialogHeader>
+        <AlertDialogFooter>
+          <AlertDialogAction onClick={() => setError(false)}>
+            Ok
+          </AlertDialogAction>
+        </AlertDialogFooter>
+      </AlertDialogContent>
+    </AlertDialog>
+  );
 }
 
-export default Modal
+export default Modal;

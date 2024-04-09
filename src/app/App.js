@@ -1,20 +1,20 @@
-import { useState } from "react";
+
 import Navbar from "../widgets/Navbar/ui/Navbar";
-import ThemeToggle from "./styles/theme/Changetheme";
-import { Web3 } from "web3";
-import { Button } from "./ui/button";
 import Modal from "../shared/Modal/ui/Modal";
+import ErrorProvider from "../shared/Error/ui/ErrorProvider";
+
 
 
 function App() {
-
-const [open,setOpen] = useState(false)
+ 
 
   return (
-    <div className="App">
-      {/* <Modal open={open} setOpen={setOpen}/> */}
-      <Navbar />
-    </div>
+    <ErrorProvider>
+      <div className="App">
+        <Modal/>
+        <Navbar />
+      </div>
+    </ErrorProvider>
   );
 }
 
