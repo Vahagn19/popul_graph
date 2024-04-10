@@ -7,10 +7,7 @@ import { ThemeProvider } from "./app/styles/theme/ThemeProvider";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
-    <ThemeProvider
-        attribute="class"
-        defaultTheme="dark"
-        enableSystem>
+    <ThemeProvider attribute="class">
         <App />
     </ThemeProvider>);
 

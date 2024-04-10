@@ -1,13 +1,13 @@
-import NavList from "../../../shared/NavList"
-import NavLogo from "../../../shared/NavLogo"
-import { Card, CardHeader, CardTitle, CardDescription, CardContent } from "../../../app/ui/card";
-import { Button } from "../../../app/ui/button";
+import NavList from "shared/NavList"
+import NavLogo from "shared/NavLogo"
+import { Card, CardHeader, CardTitle, CardDescription, CardContent } from "app/ui/card";
+import { Button } from "app/ui/button";
 
 
 function SideBar() {
     return (
-        <div className="hidden border-r md:block relative">
-            <div className="flex h-full max-h-screen flex-col gap-2 fixed lg:w-[280px] md:w-[230px]">
+        <div className="hidden  md:block relative border-r-muted border-r-2">
+      <div className="flex h-full max-h-screen flex-col gap-2 fixed lg:w-[280px] md:w-[230px]">
                 <NavLogo />
                 <NavList />
                 <div className="mt-auto p-4">

@@ -7,8 +7,8 @@ import {
   YAxis,
   Tooltip,
 } from "recharts";
-import { Card, CardContent, CardHeader } from "../../../app/ui/card";
-import getData from "../../../services/PopulationApi";
+import { Card, CardContent, CardHeader } from "app/ui/card";
+import getData from "services/PopulationApi";
 
 function PopulGraphCard() {
   const [array, setArray] = useState(null);
@@ -19,7 +19,7 @@ function PopulGraphCard() {
 
   return (
     <Card className="m-4 lg:col-span-4 w-full">
-      <CardHeader>Graph for Population</CardHeader>
+       <CardHeader>Graph for Population</CardHeader>
       <CardContent>
         <ResponsiveContainer width="100%" height={330}>
           <BarChart

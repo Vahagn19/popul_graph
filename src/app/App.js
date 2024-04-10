@@ -1,7 +1,6 @@
-
-import Navbar from "../widgets/Navbar/ui/Navbar";
-import Modal from "../shared/Modal/ui/Modal";
-import ErrorProvider from "../shared/Error/ui/ErrorProvider";
+import Modal from "shared/Modal/ui/Modal";
+import ErrorProvider from "shared/Error/ui/ErrorProvider";
+import DashBoard from "pages";
 
 
 
@@ -12,7 +11,7 @@ function App() {
     <ErrorProvider>
       <div className="App">
         <Modal/>
-        <Navbar />
+        <DashBoard />
       </div>
     </ErrorProvider>
   );

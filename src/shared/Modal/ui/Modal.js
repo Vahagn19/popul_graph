@@ -7,8 +7,8 @@ import {
   AlertDialogFooter,
   AlertDialogHeader,
   AlertDialogTitle,
-} from "../../../app/ui/alert-dialog";
-import { ErrorContext } from "../../Error/ui/ErrorProvider";
+} from "app/ui/alert-dialog";
+import { ErrorContext } from "shared/Error/ui/ErrorProvider";
 import { useContext } from "react";
 
 function Modal() {
