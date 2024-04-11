@@ -1,4 +1,4 @@
-const baseUrl = "https://api.coindesk.com/v1/bpi/currentprice.json";
+const baseUrl = "https://api.coindesk.com/v1/bpi/currentprice.json"
 
 const newArray = (obj) => {
   const result = [];
