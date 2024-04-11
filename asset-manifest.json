@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/popul_graph/static/css/main.d4c38bf3.css",
+    "main.js": "/popul_graph/static/js/main.9a3c459e.js",
+    "static/js/453.2a0e62fc.chunk.js": "/popul_graph/static/js/453.2a0e62fc.chunk.js",
+    "static/media/metamask.svg": "/popul_graph/static/media/metamask.95441491d5b64b0eb84cd6ee0fd67bb8.svg",
+    "index.html": "/popul_graph/index.html",
+    "main.d4c38bf3.css.map": "/popul_graph/static/css/main.d4c38bf3.css.map",
+    "main.9a3c459e.js.map": "/popul_graph/static/js/main.9a3c459e.js.map",
+    "453.2a0e62fc.chunk.js.map": "/popul_graph/static/js/453.2a0e62fc.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.d4c38bf3.css",
+    "static/js/main.9a3c459e.js"
+  ]
+}
