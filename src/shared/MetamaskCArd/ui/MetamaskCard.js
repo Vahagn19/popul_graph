@@ -39,7 +39,7 @@ function MetamaskCard() {
       setError(true);
     }
   }
-  console.log(userAccount);
+
   return (
     <Card 
     className="mt-4 mr-4 mb-4 lg:col-span-2 w-full md:max-w-[350px] flex flex-col justify-between relative">
